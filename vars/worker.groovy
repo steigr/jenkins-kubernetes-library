@@ -1,9 +1,8 @@
 #!/usr/bin/groovy
-import gr.stei.Fabric8Commands;
 
 def call(Map parameters = [:], body) {
-  def flow = new Fabric8Commands()
-  def cloud = flow.getCloudConfig()
+  def defaultCloud = "kubernetes"
+  def cloud = parameters.get("cloud", defaultCloud)
   
   def defaultNamespace = "jenkins"
   def namespace = parameters.get("namespace", defaultNamespace)

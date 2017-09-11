@@ -1,6 +1,4 @@
 #!/usr/bin/groovy
-import gr.stei.Fabric8Commands;
-
 def call(Map parameters = [:], body) {
 	stage('packageApp') {
 		echo "Packaging Application as ${env.DEPLOY_IMAGE}:${env.DEPLOY_TAG} from SCM"

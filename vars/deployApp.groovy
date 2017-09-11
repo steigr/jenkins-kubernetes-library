@@ -1,5 +1,4 @@
 #!/usr/bin/groovy
-import gr.stei.Fabric8Commands;
 
 def call(Map parameters = [:], body) {
 	def defaultEnvironment = "staging"
